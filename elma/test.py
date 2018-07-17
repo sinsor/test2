@@ -8,5 +8,4 @@ var3 = 5
 
 print("{} + {} = {}".format(var2, var3, (var2+var3)))
 
-
 exit(0)
