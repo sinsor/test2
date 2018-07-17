@@ -1,9 +1,16 @@
 pipeline {
     agent { docker { image 'python:3.5.1' } }
+
+    environment {
+        TEST1 = 'true'
+        TEST2 = 'sqlite'
+    }
+
     stages {
         stage('build') {
             steps {
                 sh 'python --version'
+                sh 'printenv'
             }
         }
         stage('test') {
@@ -12,6 +19,7 @@ pipeline {
             }
         }
     }
+
     post {
         always {
             echo 'This will always run'
@@ -30,4 +38,5 @@ pipeline {
             echo 'For example, if the Pipeline was previously failing but is now successful'
         }
     }
+
 }
