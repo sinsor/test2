@@ -6,6 +6,6 @@ print(var1)
 var2 = 9
 var3 = 5
 
-printbbb("{} + {} = {}".format(var2, var3, (var2+var3)))
+print("{} + {} = {}".format(var2, var3, (var2+var3)))
 
 exit(0)
