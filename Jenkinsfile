@@ -1,5 +1,5 @@
 pipeline {
-    agent { docker { image 'python:3.5.1' } }
+    agent { docker { image 'sinsor/pytest:v1' } }
 
     environment {
         TEST1 = 'true'
@@ -15,8 +15,7 @@ pipeline {
         }
         stage('test') {
             steps {
-                sh 'python elma/test.py'
-                sh 'cp test_result.xml build/reports/'
+                sh 'pytest --junitxml=build/reports/test-result.xml elma/test.py'
             }
         }
     }
