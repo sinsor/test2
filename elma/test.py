@@ -1,10 +1,10 @@
-def func(x):
-    assert (x > 2)
-    return x + 1
+def func(text):
+    assert text.endswith(".abc")
+    return text[:-4].capitalize()
 
 
 def test_answer():
-    print("the result is = {}".format(func(3)))
+    print("the result is = {}".format(func("ersin.abc")))
 
 
 def main():
