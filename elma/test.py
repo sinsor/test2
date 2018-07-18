@@ -4,7 +4,7 @@ def func(text):
 
 
 def test_answer():
-    print("the result is = {}".format(func("ersin.abc")))
+    print("the result is = {}".format(func("demir.aaa")))
 
 
 def main():
