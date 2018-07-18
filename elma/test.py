@@ -3,4 +3,4 @@ def func(x):
 
 
 def test_answer():
-    assert print("the result is = {}".format(func(3)))
+    assert print("the result is = {}".format(str(func(3))))
