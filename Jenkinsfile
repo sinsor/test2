@@ -15,7 +15,7 @@ pipeline {
         }
         stage('test') {
             steps {
-                sh 'pytest --junitxml=build/reports/test-result.xml elma/test.py'
+                sh 'python -m pytest --junitxml=build/reports/test-result.xml elma/test.py'
             }
         }
     }
