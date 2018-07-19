@@ -5,17 +5,20 @@ pipeline {
     }
 
   }
-
-  environment {
-    TEST1 = 'true'
-    TEST2 = 'sqlite'
-  }
-
   stages {
-    stage('build') {
-      steps {
-        sh 'python --version'
-        sh 'printenv'
+    stage('build1') {
+      parallel {
+        stage('build') {
+          steps {
+            sh 'python --version'
+            sh 'printenv'
+          }
+        }
+        stage('build2') {
+          steps {
+            sh 'echo $TEST1'
+          }
+        }
       }
     }
     stage('test') {
@@ -24,7 +27,10 @@ pipeline {
       }
     }
   }
-
+  environment {
+    TEST1 = 'true'
+    TEST2 = 'sqlite'
+  }
   post {
     always {
       echo 'This will always run'
