@@ -4,7 +4,10 @@ def func(text):
 
 
 def test_answer():
-    print("the result is = {}".format(func("demir.abc")))
+    var = func("demir.abc")
+    print("the result is = {}".format(var))
+    with open('armut.txt', 'a') as out:
+        out.write(var + '\n')
 
 
 def main():

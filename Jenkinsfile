@@ -35,6 +35,7 @@ pipeline {
     always {
       echo 'This will always run'
       junit 'build/reports/*.xml'
+      archiveArtifacts '*.txt'
 
     }
 
