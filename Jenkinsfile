@@ -5,6 +5,12 @@ pipeline {
     }
 
   }
+
+  environment {
+    TEST1 = 'true'
+    TEST2 = 'sqlite'
+  }
+
   stages {
     stage('build') {
       steps {
@@ -18,10 +24,7 @@ pipeline {
       }
     }
   }
-  environment {
-    TEST1 = 'true'
-    TEST2 = 'sqlite'
-  }
+
   post {
     always {
       echo 'This will always run'
