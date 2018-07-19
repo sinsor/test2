@@ -15,7 +15,6 @@ pipeline {
     stage('test') {
       steps {
         sh 'python -m pytest --junitxml=build/reports/test-result.xml elma/test.py'
-        archiveArtifacts 'pipeline.log'
       }
     }
   }
