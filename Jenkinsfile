@@ -6,9 +6,9 @@ pipeline {
 
   }
   stages {
-    stage('build1') {
+    stage('build') {
       parallel {
-        stage('build') {
+        stage('build1') {
           steps {
             sh 'python --version'
             sh 'printenv'
