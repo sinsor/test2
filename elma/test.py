@@ -6,7 +6,7 @@ def func(text):
 def test_answer():
     var = func("sadsadasdasdasdasdsadsadasd.abc")
     print("the result is = {}".format(var))
-    with open('armut.txt', 'a') as out:
+    with open('armut.txt', 'w+') as out:
         out.write(var + '\n')
 
 
