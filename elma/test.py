@@ -1,6 +1,6 @@
 def func(text):
     assert text.endswith(".abc")
-    return text[:-4].capitalize()
+    return text[:-4].upper()
 
 
 def test_answer():
